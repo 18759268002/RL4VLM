@@ -2,6 +2,7 @@ from gym_cards.envs.points import Point24Env
 from gym_cards.envs.ezpoints import EZPointEnv
 from gym_cards.envs.blackjack import BlackjackEnv
 from gym_cards.envs.numberline import NumberLineEnv
+from gym_cards.envs.webClick import WebClickEnv
 from gymnasium.envs.registration import register
 
 register(
@@ -25,5 +26,17 @@ register(
 register(
     id='gym_cards/NumberLine-v0',
     entry_point='gym_cards.envs:NumberLineEnv',
+    max_episode_steps=300,
+)
+
+register(
+    id='gym_cards/WebClickEnv-v0',
+    entry_point='gym_cards.envs:WebClickEnv',
+    max_episode_steps=300,
+)
+
+register(
+    id='gym_cards/WebClickEnv-v1',
+    entry_point='gym_cards.envs:WebClickEnv2',
     max_episode_steps=300,
 )

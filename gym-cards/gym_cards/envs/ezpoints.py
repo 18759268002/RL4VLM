@@ -172,7 +172,7 @@ class EZPointEnv(gym.Env):
         text_formula = 'Formula: '
         text = f'{" ".join(map(str, self.formula))}'
         text_formula = text_formula + text
-        font = ImageFont.truetype('dejavu/DejaVuSans.ttf', 20)
+        font = ImageFont.truetype('arial.ttf', 20)
         draw.text((10, self.canvas_height*0.86), text_formula, fill="white", font=font)  # adjust position and other properties as needed
         # Convert PIL image to numpy array if required
         image_array = np.array(canvas)

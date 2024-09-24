@@ -191,7 +191,7 @@ class Point24Env(gym.Env):
         draw = ImageDraw.Draw(canvas)
         text_formula = 'Formula:'
         text = f'{" ".join(map(str, self.formula))}'
-        font = ImageFont.truetype('dejavu/DejaVuSans.ttf', 16)
+        font = ImageFont.truetype('arial.ttf', 16)
         draw.text((10, self.canvas_height*0.70), text_formula, fill="white", font=font)  # adjust position and other properties as needed
         draw.text((10, self.canvas_height*0.80), text, fill="white", font=font)  # adjust position and other properties as needed
         # Convert PIL image to numpy array if required
